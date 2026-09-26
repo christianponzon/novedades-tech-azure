@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novedades Tech | Tecnología y Electrónica</title>
+
+    <link rel="stylesheet" href="/css/estilos.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE NAVEGACIÓN
+    ========================== -->
+    <header class="header">
+        <div class="contenedor nav">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt"></i>
+                Novedades<span>Tech</span>
+            </a>
+
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#ofertas">Ofertas</a>
+                <a href="#metricas">Métricas</a>
+                <a href="#nosotros">Nosotros</a>
+            </nav>
+
+            <div class="acciones">
+                <button class="btn-icono" id="btnBuscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="btn-icono carrito" id="btnCarrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contadorCarrito">0</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+    <section class="hero" id="inicio">
+
+        <div class="contenedor hero-contenido">
+
+            <div class="hero-texto">
+
+                <span class="etiqueta">
+                    Tecnología para todos
+                </span>
+
+                <h1>
+                    Encuentra la tecnología
+                    <span>ideal para ti</span>
+                </h1>
+
+                <p>
+                    Descubre laptops, smartphones, accesorios y los
+                    mejores productos tecnológicos con ofertas especiales.
+                </p>
+
+                <div class="hero-botones">
+
+                    <a href="#productos" class="btn-principal">
+                        Ver productos
+                    </a>
+
+                    <a href="#ofertas" class="btn-secundario">
+                        Ver ofertas
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-imagen">
+                <div class="circulo">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFICIOS
+    ========================== -->
+    <section class="beneficios">
+
+        <div class="contenedor beneficios-grid">
+
+            <div class="beneficio">
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <div>
+                    <h3>Envíos rápidos</h3>
+                    <p>Recibe tus productos de forma segura.</p>
+                </div>
+            </div>
+
+
+            <div class="beneficio">
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <h3>Compra segura</h3>
+                    <p>Protegemos tus compras y tus datos.</p>
+                </div>
+            </div>
+
+
+            <div class="beneficio">
+                <i class="fa-solid fa-headset"></i>
+
+                <div>
+                    <h3>Asistencia virtual</h3>
+                    <p>Nuestro asistente está disponible para ayudarte.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================== -->
+    <section class="productos" id="productos">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <div>
+                    <span>Nuestro catálogo</span>
+                    <h2>Productos destacados</h2>
+                </div>
+
+                <div class="buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="buscarProducto"
+                        placeholder="Buscar producto..."
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="productos-grid" id="listaProductos">
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+
+                        <span class="descuento">-15%</span>
+
+                        <div class="producto-icono">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">Laptops</span>
+
+                        <h3>Laptop Pro 15</h3>
+
+                        <p>
+                            Intel Core i7, 16 GB RAM y SSD de 512 GB.
+                        </p>
+
+                        <div class="precio">
+                            <span>S/ 2,499</span>
+                            <del>S/ 2,899</del>
+                        </div>
+
+                        <button
+                            class="btn-carrito"
+                            data-producto="Laptop Pro 15"
+                        >
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+
+                        <span class="descuento">-10%</span>
+
+                        <div class="producto-icono">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">Smartphones</span>
+
+                        <h3>Smartphone X5</h3>
+
+                        <p>
+                            Pantalla AMOLED, cámara de 50 MP y 256 GB.
+                        </p>
+
+                        <div class="precio">
+                            <span>S/ 1,299</span>
+                            <del>S/ 1,449</del>
+                        </div>
+
+                        <button
+                            class="btn-carrito"
+                            data-producto="Smartphone X5"
+                        >
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+
+                        <span class="descuento">-20%</span>
+
+                        <div class="producto-icono">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">Audio</span>
+
+                        <h3>Audífonos Wireless</h3>
+
+                        <p>
+                            Audio inalámbrico con batería de larga duración.
+                        </p>
+
+                        <div class="precio">
+                            <span>S/ 199</span>
+                            <del>S/ 249</del>
+                        </div>
+
+                        <button
+                            class="btn-carrito"
+                            data-producto="Audífonos Wireless"
+                        >
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+
+                        <div class="producto-icono">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">Monitores</span>
+
+                        <h3>Monitor Ultra 27</h3>
+
+                        <p>
+                            Monitor Full HD de 27 pulgadas para trabajo y estudio.
+                        </p>
+
+                        <div class="precio">
+                            <span>S/ 749</span>
+                        </div>
+
+                        <button
+                            class="btn-carrito"
+                            data-producto="Monitor Ultra 27"
+                        >
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OFERTAS
+    ========================== -->
+
+    <section class="ofertas" id="ofertas">
+
+        <div class="contenedor oferta-contenido">
+
+            <div>
+
+                <span>Oferta especial</span>
+
+                <h2>
+                    Hasta 30% de descuento
+                </h2>
+
+                <p>
+                    Aprovecha nuestras promociones en productos
+                    tecnológicos seleccionados.
+                </p>
+
+            </div>
+
+            <a href="#productos" class="btn-oferta">
+                Comprar ahora
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     DASHBOARD DE KPIs
+========================= -->
+
+<section class="metricas" id="metricas">
+
+    <div class="contenedor">
+
+        <div class="metricas-titulo">
+            <span>Indicadores de rendimiento</span>
+
+            <h2>Dashboard de KPIs</h2>
+
+            <p>
+                Monitoreo del comportamiento de los usuarios,
+                las ventas y el uso del asistente virtual.
+            </p>
+        </div>
+
+
+        <div class="metricas-grid">
+
+            <!-- VISITAS -->
+
+            <div class="metrica-card">
+
+                <div class="metrica-icono">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+
+                <div>
+                    <span>Visitas</span>
+
+                    <h3 id="kpiVisitas">0</h3>
+
+                    <p>Visitas registradas</p>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTOS AGREGADOS -->
+
+            <div class="metrica-card">
+
+                <div class="metrica-icono">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
+
+                <div>
+                    <span>Interés</span>
+
+                    <h3 id="kpiAgregados">0</h3>
+
+                    <p>Productos agregados</p>
+                </div>
+
+            </div>
+
+
+            <!-- VENTAS -->
+
+            <div class="metrica-card">
+
+                <div class="metrica-icono">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <div>
+                    <span>Conversiones</span>
+
+                    <h3 id="kpiVentas">0</h3>
+
+                    <p>Compras realizadas</p>
+                </div>
+
+            </div>
+
+
+            <!-- CHATBOT -->
+
+            <div class="metrica-card">
+
+                <div class="metrica-icono">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <div>
+                    <span>Asistente virtual</span>
+
+                    <h3 id="kpiChat">0</h3>
+
+                    <p>Consultas realizadas</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEGUNDA FILA -->
+
+        <div class="resumen-kpis">
+
+            <div class="kpi-destacado">
+
+                <div>
+                    <span>Tasa de conversión</span>
+
+                    <h3 id="kpiConversion">
+                        0%
+                    </h3>
+                </div>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+
+            <div class="kpi-destacado">
+
+                <div>
+                    <span>Ventas acumuladas</span>
+
+                    <h3 id="kpiIngresos">
+                        S/ 0.00
+                    </h3>
+                </div>
+
+                <i class="fa-solid fa-coins"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
+    <section class="nosotros" id="nosotros">
+
+        <div class="contenedor">
+
+            <span class="subtitulo">Novedades Tech</span>
+
+            <h2>Tecnología que mejora tu día</h2>
+
+            <p>
+                Somos una tienda especializada en productos electrónicos
+                y tecnológicos. Nuestro objetivo es ofrecer una experiencia
+                de compra rápida, sencilla y personalizada.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="contenedor footer-contenido">
+
+            <div>
+
+                <h3>
+                    Novedades<span>Tech</span>
+                </h3>
+
+                <p>
+                    Tu tienda de tecnología y electrónica.
+                </p>
+
+            </div>
+
+            <div>
+                <h4>Enlaces</h4>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#ofertas">Ofertas</a>
+            </div>
+
+            <div>
+                <h4>Ayuda</h4>
+
+                <p>Preguntas frecuentes</p>
+                <p>Envíos</p>
+                <p>Soporte</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Novedades Tech S.A.
+        </div>
+
+    </footer>
+
+    <!-- =========================
+     CARRITO LATERAL
+========================= -->
+
+<div class="carrito-overlay" id="carritoOverlay"></div>
+
+<aside class="carrito-panel" id="carritoPanel">
+
+    <div class="carrito-header">
+        <div>
+            <span>Tu compra</span>
+            <h2>Mi carrito</h2>
+        </div>
+
+        <button id="cerrarCarrito" class="cerrar-carrito">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="carrito-contenido" id="carritoContenido">
+
+        <div class="carrito-vacio" id="carritoVacio">
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h3>Tu carrito está vacío</h3>
+
+            <p>
+                Agrega productos para comenzar tu compra.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="carrito-footer">
+
+        <div class="carrito-total">
+            <span>Total</span>
+            <strong id="totalCarrito">S/ 0.00</strong>
+        </div>
+
+        <button class="btn-finalizar" id="finalizarCompra">
+            <i class="fa-solid fa-credit-card"></i>
+            Finalizar compra
+        </button>
+
+    </div>
+
+</aside>
+
+    <!-- =========================
+         BOTÓN CHATBOT
+    ========================== -->
+
+    <button class="chatbot-boton" id="abrirChat">
+
+        <i class="fa-solid fa-robot"></i>
+
+        <span>Asistente virtual</span>
+
+    </button>
+
+    <!-- =========================
+     ASISTENTE VIRTUAL
+========================= -->
+
+<div class="chatbot-ventana" id="chatbotVentana">
+
+    <!-- CABECERA -->
+
+    <div class="chatbot-header">
+
+        <div class="chatbot-perfil">
+
+            <div class="chatbot-avatar">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div>
+                <h3>Asistente Novedades Tech</h3>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    En línea
+                </span>
+            </div>
+
+        </div>
+
+        <button id="cerrarChat" class="cerrar-chat">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- MENSAJES -->
+
+    <div class="chatbot-mensajes" id="chatbotMensajes">
+
+        <div class="mensaje bot">
+
+            <div class="mensaje-avatar">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div class="mensaje-contenido">
+
+                <p>
+                    ¡Hola! Soy el asistente virtual de
+                    Novedades Tech.
+                </p>
+
+                <p>
+                    Puedo ayudarte a encontrar productos,
+                    conocer nuestras ofertas o recomendarte
+                    una opción según lo que necesitas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OPCIONES RÁPIDAS -->
+
+    <div class="chatbot-opciones">
+
+        <button data-pregunta="Recomiéndame una laptop">
+            💻 Laptop
+        </button>
+
+        <button data-pregunta="Quiero ver celulares">
+            📱 Celulares
+        </button>
+
+        <button data-pregunta="¿Qué ofertas tienen?">
+            🏷️ Ofertas
+        </button>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <form class="chatbot-input" id="chatbotForm">
+
+        <input
+            type="text"
+            id="mensajeUsuario"
+            placeholder="Escribe tu pregunta..."
+            autocomplete="off"
+        >
+
+        <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+    </form>
+
+</div>
+
+    <script src="/js/metricas.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/chatbot.js"></script>
+
+</body>
+</html>
