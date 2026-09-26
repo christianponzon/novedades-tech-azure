@@ -10,7 +10,8 @@ let metricas = JSON.parse(
     agregados: 0,
     ventas: 0,
     chat: 0,
-    ingresos: 0
+    ingresos: 0,
+    campanas: {}
 };
 
 
@@ -28,6 +29,38 @@ if (!sessionStorage.getItem("visitaRegistrada")) {
     guardarMetricas();
 }
 
+// ==========================================
+// REGISTRAR CAMPAÑAS DIGITALES
+// ==========================================
+
+const parametros = new URLSearchParams(window.location.search);
+
+const fuente = parametros.get("utm_source");
+const campana = parametros.get("utm_campaign");
+
+if (fuente && campana) {
+
+    const claveCampana = `${fuente}_${campana}`;
+
+    if (!metricas.campanas) {
+        metricas.campanas = {};
+    }
+
+    const claveSesion = `campana_${claveCampana}`;
+
+if (!sessionStorage.getItem(claveSesion)) {
+
+    metricas.campanas[claveCampana] =
+        (metricas.campanas[claveCampana] || 0) + 1;
+
+    sessionStorage.setItem(
+        claveSesion,
+        "true"
+    );
+
+    guardarMetricas();
+}
+}
 
 // ==========================================
 // GUARDAR
@@ -62,6 +95,13 @@ function mostrarMetricas() {
 
     document.getElementById("kpiChat")
         .textContent = metricas.chat;
+
+    const totalCampanas = Object.values(
+    metricas.campanas || {}
+).reduce((total, cantidad) => total + cantidad, 0);
+
+document.getElementById("kpiCampanas")
+    .textContent = totalCampanas;
 
 
     document.getElementById("kpiIngresos")
